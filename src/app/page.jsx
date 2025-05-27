@@ -170,7 +170,7 @@ export default function Home() {
             </div>
             <div className={styles.countdown}>
               <p>
-                Next Cohort Starts: <span>June 7, 2025</span>
+                Next Cohort Starts: <span>June 10, 2025</span>
               </p>
             </div>
           </div>
