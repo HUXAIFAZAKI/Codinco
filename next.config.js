@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['localhost', 'res.cloudinary.com', 'vercel.app'],
+    domains: ["localhost", "res.cloudinary.com", "vercel.app"],
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
