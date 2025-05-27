@@ -1,0 +1,541 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.heroSection {
+  margin-top: 50px;
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+  background: #1a1a1a;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.heroContent {
+  text-align: center;
+  max-width: 700px;
+  z-index: 1;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.heroTitle .highlight {
+  color: #00ff00;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroCta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.enrollButton {
+  background: #00ff00;
+  color: #1a1a1a;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enrollButton:hover {
+  background: #00cc00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+}
+
+.detailsButton {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.detailsButton:hover {
+  background: rgba(0, 255, 0, 0.2);
+  color: #00ff00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+}
+
+.priceTag {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  /* backdrop-filter: blur(8px); */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.priceBadge {
+  text-align: center;
+}
+
+.priceBadge h3 {
+  font-size: 1.8rem;
+  color: #00ff00;
+  margin-bottom: 0.3rem;
+}
+
+.priceBadge p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.duration {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.countdown {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.countdown span {
+  color: #00ff00;
+  font-weight: 600;
+}
+
+.heroImageContainer {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.codeMockup {
+  background: #2d2d2d;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.mockupHeader {
+  background: #1a1a1a;
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5555;
+}
+
+.dot:nth-child(2) {
+  background: #ffbb33;
+}
+
+.dot:nth-child(3) {
+  background: #00ff00;
+}
+
+.codeSnippet {
+  padding: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.scheduleSection,
+.toolsSection,
+.syllabusSection,
+.paymentSection {
+  padding: 3rem 1.5rem;
+  background: #1a1a1a;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionNumber {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  border-radius: 50%;
+  background: #00ff00;
+  color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.scheduleSection h2,
+.toolsSection h2,
+.syllabusSection h2,
+.paymentSection h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.scheduleGrid,
+.toolsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.scheduleItem,
+.tool {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.scheduleItem:hover,
+.tool:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+}
+
+.scheduleItem i,
+.tool i {
+  font-size: 2rem;
+  color: #00ff00;
+  margin-bottom: 0.8rem;
+}
+
+.scheduleItem h4,
+.tool h4 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.scheduleItem p,
+.tool p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+.statusOpen {
+  color: #00ff00;
+  font-weight: 600;
+}
+
+.syllabusSection.visible .sectionHeader {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sliderContainer {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  width: calc(100% * 17); /* 9 main + 4 prev + 4 next for desktop */
+}
+
+.week {
+  flex: 0 0 calc(25% - 0.75rem); /* 4 cards */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.week:last-child {
+  margin-right: 0;
+}
+
+.week:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+}
+
+.week h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00ff00;
+  margin-bottom: 0.5rem;
+}
+
+.week h5 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.weekDescription {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.week ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0.8rem;
+}
+
+.week ul li {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin: 0.4rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.week ul li::before {
+  content: "•";
+  color: #00ff00;
+  position: absolute;
+  left: 0;
+}
+
+.project {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.project strong {
+  color: #00ff00;
+}
+
+.sliderButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 255, 0, 0.2);
+  color: #ffffff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  font-size: 1.2rem;
+}
+
+.sliderButton:hover {
+  background: #00ff00;
+  color: #1a1a1a;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+}
+
+.sliderButton:first-of-type {
+  left: 0px;
+}
+
+.sliderButton:last-of-type {
+  right: 0px;
+}
+
+.paymentInfo {
+  max-width: 600px;
+  margin: 1.5rem auto;
+}
+
+.paymentMethod {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.paymentMethod i {
+  font-size: 2.5rem;
+  color: #00ff00;
+  margin-bottom: 0.8rem;
+}
+
+.paymentMethod h4 {
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.paymentMethod h3 {
+  font-size: 1.6rem;
+  color: #00ff00;
+  margin: 0.8rem 0;
+}
+
+.paymentMethod p {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  margin: 0.4rem 0;
+}
+
+.note {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #e0e0e0;
+}
+
+.feeNote {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1200px) {
+  .week {
+    flex: 0 0 calc(25% - 0.75rem); /* 4 cards */
+  }
+  .cohortGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .week {
+    flex: 0 0 calc(50% - 0.5rem); /* 2 cards */
+  }
+  .sliderTrack {
+    width: calc(100% * 13); /* 9 main + 2 prev + 2 next */
+  }
+}
+
+@media (max-width: 767px) {
+  .heroSection {
+    padding: 2.5rem 1rem;
+    min-height: 70vh;
+  }
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+  .subheading {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .heroCta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .priceTag {
+    flex-direction: column;
+    align-items: center;
+  }
+  .scheduleSection,
+  .toolsSection,
+  .syllabusSection,
+  .paymentSection {
+    padding: 2rem 1rem;
+  }
+  .scheduleGrid,
+  .toolsGrid {
+    grid-template-columns: 1fr;
+  }
+  .week {
+    flex: 0 0 calc(100% - 0.5rem); /* 1 card */
+  }
+  .sliderTrack {
+    width: calc(100% * 11); /* 9 main + 1 prev + 1 next */
+  }
+  .sliderButton:first-of-type {
+    left: 10px;
+  }
+  .sliderButton:last-of-type {
+    right: 10px;
+  }
+  .sectionNumber {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.9rem;
+  }
+  .scheduleSection h2,
+  .toolsSection h2,
+  .syllabusSection h2,
+  .paymentSection h2 {
+    font-size: 1.8rem;
+  }
+}

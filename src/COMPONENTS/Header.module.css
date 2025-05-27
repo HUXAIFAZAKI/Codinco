@@ -1,0 +1,298 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(26, 26, 26, 0.9);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scrolled {
+  background: rgba(26, 26, 26, 0.95);
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.scrolled .logo {
+  opacity: 0.8;
+  animation: logoGlow 2s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.3));
+  }
+}
+
+.logoText {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.logo:hover .logoText {
+  color: #00ff00;
+  transition: color 0.3s ease;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.navLinkText {
+  position: relative;
+  z-index: 2;
+}
+
+.navLinkGlow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #00ff00;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navLink:hover .navLinkGlow {
+  width: 100%;
+}
+
+.navLink:hover .navLinkText {
+  color: #00ff00;
+}
+
+.scrolled .navLink {
+  animation: linkFade 0.5s ease-in-out;
+}
+
+@keyframes linkFade {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.enrollButton {
+  background: #00ff00;
+  color: #1a1a1a;
+  border: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.enrollText {
+  position: relative;
+  z-index: 2;
+}
+
+.enrollGlow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transition: all 0.5s ease;
+}
+
+.enrollParticle {
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  transform: translateY(-50%) scale(0);
+  transition: all 0.3s ease;
+}
+
+.enrollButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.3);
+}
+
+.enrollButton:hover .enrollGlow {
+  left: 100%;
+}
+
+.enrollButton:hover .enrollParticle {
+  transform: translateY(-50%) scale(1);
+  animation: pulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.enrollButton:active {
+  transform: translateY(0);
+}
+
+.menuButton {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.menuButton span {
+  width: 100%;
+  height: 2.5px;
+  background: #00ff00;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.menuButton.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  background: #00ff00;
+}
+
+.menuButton.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menuButton.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  background: #00ff00;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0.8rem 1.5rem;
+  }
+
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .logoText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuButton {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    flex-direction: column;
+    padding: 6rem 2rem 2rem;
+    transition: right 0.3s ease;
+    gap: 2rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .navLink {
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+  }
+
+  .enrollButton {
+    width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.6rem 1rem;
+  }
+
+  .logoText {
+    font-size: 1.3rem;
+  }
+
+  .nav {
+    width: 100%;
+    padding: 5.5rem 1.5rem 2rem;
+    gap: 1.8rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
+  }
+}

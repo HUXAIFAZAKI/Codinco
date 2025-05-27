@@ -1,0 +1,22 @@
+{
+  "reviews": [
+    {
+      "id": "8fc74fcd-ff23-41be-9be9-664503c565f4",
+      "name": "Aisha",
+      "rating": 4,
+      "review": "i am very happy to join your team",
+      "date": "2025-05-27T03:55:40.195Z",
+      "avatar": "/assets/Avatar5.png",
+      "status": "pending"
+    },
+    {
+      "id": "23a1a85d-6a9b-4ecc-b069-f4c9716acb29",
+      "name": "ewq",
+      "rating": 5,
+      "review": "ewq",
+      "date": "2025-05-27T09:21:47.498Z",
+      "avatar": "/assets/Avatar10.png",
+      "status": "pending"
+    }
+  ]
+}

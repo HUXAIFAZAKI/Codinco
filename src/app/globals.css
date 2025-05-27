@@ -1,0 +1,443 @@
+/* styles/globals.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* VARIABLE DEFINITIONS */
+:root {
+  /* COLOR PALETTE */
+  --primary: #00a36c;
+  --secondary: #008f5e;
+  --highlight: #00c48c;
+  --background: #0a0a0a;
+  --background-light: #1a1a1a;
+  --text: #ffffff;
+  --text-light: #e0e0e0;
+  --white: #ffffff;
+  --black: #000000;
+  --success: #22c55e;
+  --error: #ef4444;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+
+  /* FONT FAMILIES */
+  --heading-font-style: "Outfit", sans-serif;
+  --primary-font-style: "Poppins", sans-serif;
+  --secondary-font-style: "Audiowide", cursive;
+
+  /* TYPOGRAPHY SIZES */
+  --h1: 4rem;
+  --h1-small: 3rem;
+  --h2: 3rem;
+  --h2-small: 2rem;
+  --h3: 2rem;
+  --h3-small: 1.5rem;
+  --h4: 1rem;
+  --h4-small: 0.9rem;
+  --button: 1.05rem;
+  --button-small: 0.85rem;
+  --paragraph: 1rem;
+  --paragraph-small: 0.85rem;
+  --nav-link: 0.9rem;
+  --icon-size: 1.25rem;
+  --icon-size-small: 1rem;
+}
+
+/* =========================
+   CSS RESET (DO NOT CHANGE)
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--primary-font-style);
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADINGS AND TEXT */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--white);
+  font-family: var(--heading-font-style);
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 1.2;
+}
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+h4 {
+  font-size: var(--h4);
+}
+
+p {
+  font-size: var(--paragraph);
+  color: var(--text);
+}
+a {
+  text-decoration: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+button {
+  color: var(--white);
+  font-size: var(--button);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================
+   NAVIGATION & HEADER
+========================= */
+header {
+  padding-block: 0.5rem;
+}
+header img:first-of-type,
+.footer img:first-of-type {
+  width: 7rem;
+}
+header nav,
+header nav ul,
+.footer,
+.footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header nav ul {
+  gap: 3rem;
+}
+.footer ul {
+  gap: 2rem;
+}
+header nav ul li a,
+.footer ul li a {
+  font-size: var(--nav-link);
+  color: var(--text);
+  transition: color 0.2s ease-out;
+}
+header nav ul li a:hover,
+.footer ul li a:hover {
+  color: var(--highlight);
+}
+header i {
+  font-size: var(--icon-size);
+  color: var(--white);
+  cursor: pointer;
+  transition: color 0.2s ease-out;
+}
+header i:hover {
+  color: var(--highlight);
+}
+
+/* RESPONSIVE NAV */
+.responsive-nav {
+  display: none;
+  position: relative;
+}
+.responsive-nav-content {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  top: 150%;
+  right: 0;
+  width: 95vw;
+  border-radius: 1rem 0 1rem 1rem;
+  background-color: var(--background-light);
+  padding: 1rem;
+}
+.responsive-nav-content > * {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.responsive-nav-content ul {
+  display: flex;
+  flex-direction: column;
+}
+.responsive-nav-active {
+  display: block !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  margin-top: auto;
+  text-align: center;
+  background-color: var(--background-light);
+  padding-block: 4rem 2rem;
+  border-radius: 4rem 4rem 0 0;
+}
+footer h1 {
+  max-width: 70%;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+footer h1 span {
+  color: var(--highlight);
+}
+hr {
+  margin-top: 7.5em;
+}
+footer .footer {
+  padding-block: 1rem;
+  margin-bottom: 1rem;
+}
+footer .socials {
+  display: flex;
+  justify-content: center;
+  color: var(--text);
+}
+footer .socials > * {
+  margin-inline: 1rem;
+}
+footer .socials .social {
+  border-radius: 8px;
+  outline: 1px solid var(--text);
+  cursor: pointer;
+  transition: color 0.2s ease-out, outline-color 0.2s ease-out;
+}
+footer .socials .social a {
+  display: grid;
+  place-items: center;
+  padding: 0.5em;
+  color: var(--white);
+}
+footer .socials .social a:hover {
+  color: var(--highlight);
+  outline-color: var(--highlight);
+}
+
+/* =========================
+   UTILITY CLASSES
+========================= */
+.container {
+  width: min(77.5rem, 95%);
+  margin-inline: auto;
+}
+.background-dark {
+  background-color: var(--background-light);
+}
+.btn {
+  padding: 0.5em 1.5rem;
+  background-color: var(--highlight);
+}
+.btn-small {
+  padding: 0.25em 1.25em;
+  font-size: var(--button-small);
+}
+.searchbox {
+  display: inline-block;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  background-color: var(--white);
+}
+.searchbox input {
+  background-color: transparent;
+}
+.card {
+  min-width: 15rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 2px solid var(--background-light);
+}
+.large-card {
+  min-width: 18rem;
+  padding: 3rem;
+  background-image: linear-gradient(var(--background-light), var(--background));
+  border: 4px solid var(--text);
+}
+.highlight-circle {
+  padding: 1rem;
+  border: 2px solid var(--primary);
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.msg-card {
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  position: fixed;
+  z-index: 100000;
+  background-color: red;
+  bottom: 4rem;
+  left: 4rem;
+  border-radius: 1rem;
+  box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.2);
+  animation: fadeOut 3s ease-out;
+}
+.success {
+  background-color: var(--success);
+}
+.warning {
+  background-color: var(--error);
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@media screen and (max-width: 1050px) {
+  h1 {
+    font-size: var(--h1-small);
+  }
+  h2 {
+    font-size: var(--h2-small);
+  }
+  h3 {
+    font-size: var(--h3-small);
+  }
+  h4 {
+    font-size: var(--h4-small);
+  }
+  p {
+    font-size: var(--paragraph-small);
+  }
+  header nav ul {
+    gap: 2rem;
+  }
+  .footer ul {
+    gap: 1rem;
+  }
+  header i {
+    font-size: var(--icon-size-small);
+  }
+  footer {
+    padding-block: 3rem 2rem;
+    border-radius: 3rem 3rem 0 0;
+  }
+  .btn {
+    padding: 0.25em 1em;
+    font-size: var(--button-small);
+  }
+  .btn-small {
+    padding: 0.2em 0.75em;
+    font-size: var(--paragraph-small);
+  }
+  .searchbox {
+    padding-left: 1.25em;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .large-card {
+    padding: 2rem;
+  }
+  .highlight-circle {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --h1-small: 2.5rem;
+    --h2-small: 1.75rem;
+    --h3-small: 1.25rem;
+    --h4-small: 0.85rem;
+    --button: 0.85rem;
+    --paragraph: 0.8rem;
+    --nav-link: 0.65rem;
+    --icon-size: 1rem;
+  }
+  .container > ul,
+  .container > #login-container {
+    display: none;
+  }
+  .responsive-nav {
+    display: block !important;
+  }
+  .footer ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  footer {
+    padding-block: 2rem 1rem;
+    border-radius: 3rem 3rem 0 0;
+  }
+  .btn-small {
+    padding: 0.2em 0.5em;
+  }
+  .searchbox {
+    padding-left: 1em;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .large-card {
+    padding: 2rem;
+  }
+  .highlight-circle {
+    padding: 0.25rem;
+  }
+}
